@@ -110,7 +110,7 @@ class Bot(commands.Cog):
         elif isinstance(error, checks.Suspended):
             embed = discord.Embed(color=discord.Color.red())
             embed.title = "Account Suspended"
-            embed.description = "Your account was found to be in violation of Pokétwo rules and has been permanently blacklisted from using the bot."
+            embed.description = "Your account was found to be in violation of Pokétwo rules and has been permanently blacklisted from using the bot. If you wish to appeal this suspension, fill out the [appeals form](https://docs.google.com/forms/u/0/d/e/1FAIpQLSeXCWuCloEtUrwaCUwfLsFvyg-wATOZsvG4SOXEBA2adgkqvA/viewform)."
             embed.add_field(name="Reason", value=error.reason or "No reason provided")
             await ctx.send(embed=embed)
         elif isinstance(
